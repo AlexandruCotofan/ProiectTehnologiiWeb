@@ -5,14 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Out</title>
-    <link rel = "stylesheet" href = "training.css">
+    <link rel = "stylesheet" href = "generator.css">
 </head>
 <body>
-    <img src="poze/logo.jpg" class="logo">
+     <div id="sideNav">
+      <nav>
+        <ul>
+          <li><a href="epic.html">HOME</a></li>
+         </ul>
+    </nav>
+    </div>
+    
+    <div id="menuBtn">
+          <img src="poze/menu.png" id="menu">
+          </div>
+      
     <form class = "training__form">
         <h1 class = "training__title">GENERARE ANTRENAMENT</h1>
         <label>GRUPA DE MUȘCHI</label>
-        <select class = "training__select">
+        <select  class = "training__select" >
+            <option selected disabled>Choose one</option>
             <option>Toate</option>
             <option>Membre superioare</option>
             <option>Abdomen</option>
@@ -20,6 +32,7 @@
         </select>
         <label>ÎNĂLȚIME</label>
         <select class = "training__select">
+            <option selected disabled>Choose one</option>
             <option>sub 80 cm</option>
             <option>80-100 cm</option>
             <option>100-120 cm</option>
@@ -31,6 +44,7 @@
         </select>
         <label>GREUTATE</label>
         <select class = "training__select">
+              <option selected disabled>Choose one</option>
             <option>sub 30 kg</option>
             <option>30-40 kg</option>
             <option>40-50 kg</option>
@@ -42,6 +56,7 @@
         </select>
         <label>VÂRSTĂ</label>
         <select class = "training__select">
+              <option selected disabled>Choose one</option>
             <option>sub 10 ani</option>
             <option>10-15 ani</option>
             <option>15-20 ani</option>
@@ -53,16 +68,40 @@
         </select>
         <label>LOCAȚIE</label>
         <select class = "training__select">
+              <option selected disabled>Choose one</option>
             <option>Aer liber</option>
             <option>Acasă</option>
         </select>
         <label>DIFICULTATE</label>
         <select class = "training__select">
+              <option selected disabled>Choose one</option>
             <option>Ușor</option>
             <option>Mediu</option>
             <option>Intensiv</option>
         </select>
         <button class = "training__btn">Antrenează-mă!</button>
     </form>
+     <script>
+      var menuBtn =document.getElementById("menuBtn")
+      var sideNav =document.getElementById("sideNav")
+      var menu =document.getElementById("menu")
+      sideNav.style.right = "-250px";
+      
+      menuBtn.onclick=function(){
+          if(sideNav.style.right=="-250px"){
+              sideNav.style.right = "0";
+              menu.src="poze/close.png";
+          }
+          else{
+               sideNav.style.right = "-250px";
+              menu.src="poze/menu.png";
+          }
+      }
+      var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 1000,
+	speedAsDuration: true
+});
+      
+      </script>
 </body>
 </html>

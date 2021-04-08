@@ -6,53 +6,43 @@ body {
     background-attachment: fixed;
 }
 
-.logo {
-    width: 120px;
-    position: absolute;
-    top: 4%;
-    left:10%;   
+#sideNav{
+  width: 250px;
+    height: 100 vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #009688;
+    z-index: 2;
+    transition: 0.5s;
 }
 
-.training__form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 50vh;
-    font-size: 24px;
-    padding: 2em;
-    background: #191919;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+nav ul li a{
+   text-decoration: none;
+    color:#fff;
+}
+#menuBtn{
+    width: 50px;
+    height: 50px;
+    background: #009688;
     text-align: center;
-}
-
-.training__title {
-    font-size: 28px;
-    font-weight: normal;
-    left: 50%;
-}
-
-.training__select {
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #191919;
-    border: 2px solid #ffffff;
-    margin-bottom: 1.5em;
-    border: 2px solid #3498db;
-    padding: 0.5em;
-    width: 12.5em;
-    outline: none;
-    border-radius: 1.25em;
-    transition: 0.25s;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index:3;
     cursor: pointer;
+    
 }
 
-.training__select:focus {
-    border-color: #2ecc71;
+#menuBtn img{
+    width: 25px;
+    margin-top: 15px;
 }
-
 .training__btn {
     font-size: 28px;
     border-radius: 1em;

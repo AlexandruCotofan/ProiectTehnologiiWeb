@@ -8,10 +8,22 @@
     <title>Work Out</title>
 </head>
 <body>
-    <img src="poze/logo.jpg" class="logo">
+   
+     <div id="sideNav">
+      <nav>
+        <ul>
+          <li><a href="epic.html">HOME</a></li>
+         </ul>
+    </nav>
+    </div>
+    
+    <div id="menuBtn">
+          <img src="poze/menu.png" id="menu">
+          </div>
+    
     <section class = "training__container">
         <section class = "training__container__item">
-                <img src = "poze/pushup.jpg" class = "training__container__item__image">
+                <img src = "poze/antr1.jpg" class = "training__container__item__image">
                 <p>Ordine exercițiu: 1</p>
                 <p>Tip exercițiu: Flotări</p>
                 <p>Număr: 30</p>
@@ -19,7 +31,7 @@
                 <button class = "training__btn">Marchează drept terminat</button>
         </section>
         <section class = "training__container__item">
-            <img src = "poze/pushup.jpg" class = "training__container__item__image">
+            <img src = "poze/antr1.jpg" class = "training__container__item__image">
             <p>Ordine exercițiu: 2</p>
             <p>Tip exercițiu: Flotări</p>
             <p>Număr: 30</p>
@@ -27,7 +39,7 @@
             <button class = "training__btn">Marchează drept terminat</button>
         </section>
         <section class = "training__container__item">
-            <img src = "poze/pushup.jpg" class = "training__container__item__image">
+            <img src = "poze/antr1.jpg" class = "training__container__item__image">
             <p>Ordine exercițiu: 3</p>
             <p>Tip exercițiu: Flotări</p>
             <p>Număr: 30</p>
@@ -35,7 +47,7 @@
             <button class = "training__btn">Marchează drept terminat</button>
         </section>
         <section class = "training__container__item">
-            <img src = "poze/pushup.jpg" class = "training__container__item__image">
+            <img src = "poze/antr1.jpg" class = "training__container__item__image">
             <p>Ordine exercițiu: 4</p>
             <p>Tip exercițiu: Flotări</p>
             <p>Număr: 30</p>
@@ -43,7 +55,7 @@
             <button class = "training__btn">Marchează drept terminat</button>
         </section>
         <section class = "training__container__item">
-            <img src = "poze/pushup.jpg" class = "training__container__item__image">
+            <img src = "poze/antr1.jpg" class = "training__container__item__image">
             <p>Ordine exercițiu: 5</p>
             <p>Tip exercițiu: Flotări</p>
             <p>Număr: 30</p>
@@ -51,5 +63,27 @@
             <button class = "training__btn">Marchează drept terminat</button>
         </section>
     </section>
+     <script>
+      var menuBtn =document.getElementById("menuBtn")
+      var sideNav =document.getElementById("sideNav")
+      var menu =document.getElementById("menu")
+      sideNav.style.right = "-250px";
+      
+      menuBtn.onclick=function(){
+          if(sideNav.style.right=="-250px"){
+              sideNav.style.right = "0";
+              menu.src="poze/close.png";
+          }
+          else{
+               sideNav.style.right = "-250px";
+              menu.src="poze/menu.png";
+          }
+      }
+      var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 1000,
+	speedAsDuration: true
+});
+      
+      </script>
 </body>
 </html>
