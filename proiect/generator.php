@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Out - Generator</title>
-    <link rel = "stylesheet" href = "training.css">
+    <link rel="stylesheet" href="training.css">
 </head>
+
 <body>
+    <?php
+    require_once "header.php";
+    ?>
+
     <img src="poze/logo.jpg" class="logo">
-    
-    <div id="sideNav">
-        <nav>
-            <ul>
-                <li><a href = "epic.php">HOME</a></li>
-                <li><a href = "classment.php">CLASAMENT</a></li>
-            </ul>
-        </nav>
-    </div>
-    
-    <div id="menuBtn">
-        <img src="poze/menu.png" id="menu">
-    </div>
-      
-    <form class = "training__form" action = "training.php">
-        <h1 class = "training__title">GENERARE ANTRENAMENT</h1>
+
+    <form class="training__form" action="training.php">
+        <h1 class="training__title">GENERARE ANTRENAMENT</h1>
         <label>GEN</label>
-        <select class = "training__select">
+        <select class="training__select">
             <option selected disabled>Choose one</option>
             <option>Masculin</option>
             <option>Feminin</option>
         </select>
         <label>ÎNĂLȚIME</label>
-        <select class = "training__select">
+        <select class="training__select">
             <option selected disabled>Choose one</option>
             <option>sub 80 cm</option>
             <option>80-100 cm</option>
@@ -44,7 +37,7 @@
             <option>200+ cm</option>
         </select>
         <label>GREUTATE</label>
-        <select class = "training__select">
+        <select class="training__select">
             <option selected disabled>Choose one</option>
             <option>sub 30 kg</option>
             <option>30-40 kg</option>
@@ -56,7 +49,7 @@
             <option>130+ kg</option>
         </select>
         <label>VÂRSTĂ</label>
-        <select class = "training__select">
+        <select class="training__select">
             <option selected disabled>Choose one</option>
             <option>sub 10 ani</option>
             <option>10-15 ani</option>
@@ -68,7 +61,7 @@
             <option>65+ ani</option>
         </select>
         <label>GRUPA DE MUȘCHI</label>
-        <select class = "training__select">
+        <select class="training__select">
             <option selected disabled>Choose one</option>
             <option>Toate</option>
             <option>Membre superioare</option>
@@ -76,40 +69,20 @@
             <option>Membre inferioare</option>
         </select>
         <label>LOCAȚIE</label>
-        <select class = "training__select">
+        <select class="training__select">
             <option selected disabled>Choose one</option>
             <option>Aer liber</option>
             <option>Acasă</option>
         </select>
         <label>DIFICULTATE</label>
-        <select class = "training__select">
+        <select class="training__select">
             <option selected disabled>Choose one</option>
             <option>Ușor</option>
             <option>Mediu</option>
             <option>Intensiv</option>
         </select>
-        <input type = "submit" class = "training__btn" value = "Antrenează-mă!">
+        <input type="submit" class="training__btn" value="Generează">
     </form>
-    <script>
-      var menuBtn =document.getElementById("menuBtn")
-      var sideNav =document.getElementById("sideNav")
-      var menu =document.getElementById("menu")
-      sideNav.style.right = "-250px";
-      
-        menuBtn.onclick=function(){
-            if(sideNav.style.right=="-250px"){
-                sideNav.style.right = "0";
-                menu.src="poze/close.png";
-            }
-            else{
-                sideNav.style.right = "-250px";
-                menu.src="poze/menu.png";
-            }
-        }
-        var scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 1000,
-        speedAsDuration: true
-        });  
-    </script>
 </body>
+
 </html>
