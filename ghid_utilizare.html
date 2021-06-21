@@ -45,27 +45,23 @@
             <section id="login">
                 <h3>2.1. Pagini:</h3>
                 <p>Aplicația are la bază o pagină de autentificare, una de
-                    înregistrare, una de verificare, o pagină principală, una cu generatorul, una cu antrenamentele
-                    generate, una cu rezultatul antrenamentului curent și
-                    una cu un clasament al celor mai active persoane. Fiecare pagină conține un
-                    header cu link-uri spre pagina principală și clasament.</p>
+                    înregistrare, una de verificare, o pagină principală, mai multe pagini ce reprezintă generatorul,
+                    una cu antrenamentele
+                    generate, una cu rezultatul antrenamentului curent,
+                    una cu un clasament al celor mai active persoane, una cu statistici ale tuturor conturilor și una cu
+                    statistici personale.
+                    Majoritatea paginilor conțin un header cu link-uri spre pagina de autentificare și clasament.</p>
                 <section>
                     <h4>2.1.1. Pagina de autentificare:</h4>
-                    <p>Pagina principală este prima pagină a aplicației, care are rolul
-                        de a întâmpina fiecare utilizator, a prezenta pe larg aspectele
-                        aplicației și a face legătura cu paginile de login și clasamentul.</p>
-                </section>
-                <section>
-                    <h4>2.1.2. Pagina de login:</h4>
-                    <p>Pagina de login este prima pagină a aplicației pentru un utilizator neautentificat și
+                    <p>Pagina de autentificare este prima pagină a aplicației pentru un utilizator neautentificat și
                         are rolul de a autentifica utilizatorii pentru ca aceștia să aibă acces la generator,
                         să își poată reține datele și să poată apărea în clasament. Pentru a se autentifica,
-                        utilizatorii
-                        vor trebui să își introducă adresa de email și parola aleasă. În cazul în care un utilizator
-                        nu are cont, își poate crea unul prin intermediul paginii de înregistrare.</p>
+                        utilizatorii vor trebui să își introducă adresa de email și parola aleasă. În cazul în
+                        care un utilizator nu are cont, își poate crea unul prin intermediul paginii de înregistrare.
+                    </p>
                 </section>
                 <section>
-                    <h4>2.1.3. Pagina de înregistrare:</h4>
+                    <h4>2.1.2. Pagina de înregistrare:</h4>
                     <p>Pagina de înregistrare are rolul de a permite utilizatorilor să
                         își creeze cont dacă nu au. Acest cont va putea fi folosit pentru
                         a primi acces deplin la aplicație. Utilizatorii vor trebui să își introducă
@@ -73,20 +69,19 @@
                         putea verifica contul prin intermediul unui link trimis pe email.</p>
                 </section>
                 <section>
-                    <h4>2.1.4. Pagina de verificare:</h4>
+                    <h4>2.1.3. Pagina de verificare:</h4>
                     <p>După urmarea link-ului trimis pe email, utilizatorii vor ajunge la pagina de verificare, care
                         le va valida conturile.</p>
                 </section>
                 <section>
-                    <h4>2.1.5. Pagina principală:</h4>
-                    <p>Una din paginile accesibile din header-ul comun tuturor paginilor, pagina principală conține
-                        informații
-                        despre aplicație și link-uri către generator și clasament. Pagina principală este accesibilă
-                        doar pentru
-                        utilizatori autentificați, cei anonimi fiind redirecționați către pagina de autentificare.</p>
+                    <h4>2.1.4. Pagina principală:</h4>
+                    <p>Pagina principală conține informații despre aplicație și link-uri către generator, clasament,
+                        statisticile globale, citate motivaționale, săli recomandate și un calculator IMC extern.
+                        Pagina principală este accesibilă doar pentru utilizatori autentificați, cei anonimi fiind
+                        redirecționați către pagina de autentificare.</p>
                 </section>
                 <section>
-                    <h4>2.1.6. Generatorul de antrenamente:</h4>
+                    <h4>2.1.5. Generatorul de antrenamente:</h4>
                     <p>Partea importantă a aplicației, acest generator primește informații
                         de la utilizator prin intermediul unui formular cu multiple selecții,
                         utilizatorul specificând înălțimea, greutatea, grupa de mușchi pe care o dorește
@@ -101,8 +96,41 @@
                     <h4>2.1.7. Clasamentul:</h4>
                     <p>Această pagină, accesibilă oricui, indiferent dacă are cont sau nu, afișează cele
                         mai active persoane, în ordinea numărului de antrenamente realizate. Informațiile disponibile
-                        sunt:
-                        username-ul, adresa de email și numărul de antrenamente.</p>
+                        sunt: username-ul, adresa de email, numărul de antrenamente, caloriile arse și
+                        antrenamentul preferat. De asemenea, acest clasament este disponibil și în format JSON sau
+                        PDF, accesibile oricând în cadrul paginii.</p>
+                </section>
+                <section>
+                    <h4>2.1.8. Paginile de statistici:</h4>
+                    <p>Aplicația conține două pagini de statistici: una de statistici globale și una de statistici
+                        personale:
+                    </p>
+                    <ul>
+                        <li>Pagina de statistici globale prezintă numărul de antrenamente, caloriile arse și
+                            antrenamentul preferat al fiecărui utilizator, similar cu clasamentul, disponibile
+                            și drept flux de date RSS.</li>
+                        <li>
+                            Pagina de statistici personale este accesibilă în cadrul celei de statistici globale 
+                            și descrie numărul de antrenamente, caloriile arse și antrenamentul preferat al 
+                            utilizatorului curent atât în total, cât și în cursul lunii curente și în comparație 
+                            cu luna precedentă.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>2.1.9. Paginile extra:</h4>
+                    <p>Aplicația conține alte pagini, care nu au legătură cu generatorul, în schimb având 
+                        un scop informativ sau motivator:
+                    </p>
+                    <ul>
+                        <li>Pagina de citate motivaționale conține câteva citate accesibile prin apăsarea unui buton.</li>
+                        <li>Pagina de săli recomandate este o pagină de căutare, care arată toate sălile dispoinibile 
+                            în funcție de caracterele introduse.
+                        </li>
+                        <li>Calculatorul IMC este un site extern cu scopul de a calcula indicele de masă corporală al 
+                            unui individ, acesta aflând dacă este subponderal, supraponderal sau are o greutate normală.
+                        </li>
+                    </ul>
                 </section>
             </section>
             <section>
@@ -112,35 +140,68 @@
                     <h4>2.2.1. Autentificarea și înregistrarea:</h4>
                     <p>La accesarea oricărei pagini, mai puțin paginile de înregistrare și clasamentul, utilizatorul va
                         fi redirecționat spre pagina de autentificare, unde va trebui să introducă adresa de email și
-                        parola aleasă pentru a primi acces deplin. Dacă nu are cont, poate intra pe 
+                        parola aleasă pentru a primi acces deplin. Dacă nu are cont, poate intra pe
                         pagina de înregistrare prin intermediul unui buton situat sub cel de autentificare.</p>
-                    <p>Odată ajuns pe pagina de înregistrare, va fi necesară introducerea unui username, o parolă și 
-                        o adresă de email care trebuie să fie unică. În caz că există un alt cont înregistrat cu 
-                        acea adresă, utilizatorul va fi atenționat. După introducerea și trimiterea datelor, 
-                        utilizatorul va primi prin email un link de verificare. Odată urmat, acest cont va fi validat.</p>
+                    <p>Odată ajuns pe pagina de înregistrare, va fi necesară introducerea unui username, o parolă și
+                        o adresă de email care trebuie să fie unică. În caz că există un alt cont înregistrat cu
+                        acea adresă, utilizatorul va fi atenționat. După introducerea și trimiterea datelor,
+                        utilizatorul va primi prin email un link de verificare. Odată urmat, acest cont va fi validat.
+                    </p>
                 </section>
                 <section>
                     <h4>2.2.2. Generatorul:</h4>
-                    <p>Odată autentificat, utilizatorul va putea accesa generatorul prin intermediul paginii principale sau 
-                        la finalul unui antrenament precedent. Acesta va fi rugat să își introducă înălțimea, greutatea, 
-                        grupa de mușchi pe care dorește să o antreneze, locația (fie acasă sau afară) și dificultatea 
-                        (ușor, mediu sau intensiv). După introducerea datelor, utilizatorul este trimis pe pagina cu 
-                        antrenamentul generat. Pe acea pagină există un buton de încheiere a antrenamentului, care 
-                        va trimite utilizatorul în pagina de încheiere, de unde va putea accesa clasamentul sau 
+                    <p>Odată autentificat, utilizatorul va putea accesa generatorul prin intermediul paginii principale
+                        sau
+                        la finalul unui antrenament precedent. Acesta va fi rugat să își introducă înălțimea, greutatea,
+                        grupa de mușchi pe care dorește să o antreneze, locația (fie acasă sau afară) și dificultatea
+                        (ușor, mediu sau intensiv). După introducerea datelor, utilizatorul este trimis pe pagina cu
+                        antrenamentul generat. Pe acea pagină există un buton de încheiere a antrenamentului, care
+                        va trimite utilizatorul în pagina de încheiere, de unde va putea accesa clasamentul sau
                         genera alt antrenament.</p>
                 </section>
                 <section>
                     <h4>2.2.3. Clasamentul:</h4>
-                    <p>Accesibilă oricărui utilizator, clasamentul conține un tabel cu cei mai activi utilizatori 
-                        în funcție de numărul de antrenamente realizate, ce conține 3 câmpuri: username, adresa de 
-                        email și numărul de antrenamente. Alături de tabel este prezentat cel mai activ utilizator și 
-                        un buton spre pagina principală.</p>
+                    <p>Accesibilă oricărui utilizator, clasamentul conține un tabel cu cei mai activi utilizatori
+                        în funcție de caloriile arse. Alături de tabel este prezentat cel mai activ utilizator și
+                        câteva butoane spre afișările în format JSON sau PDF, sau spre pagina principală.</p>
+                </section>
+                <section>
+                    <h4>2.2.4. Statisticile:</h4>
+                    <p>Statisticile globale pot fi accesate din mai multe pagini, în special din pagina principală. 
+                        Acolo, utilizatorul va vedea multiple conturi, fiecare cu propriile date, pe scurt. De asemenea, 
+                        poate folosi fluxul RSS pentru a sta la curent cu noutățile.
+                    </p>
+                    <p>
+                        Statisticile personale pot fi accesate la finalul unui antrenament sau în cadrul paginii de 
+                        statistici globale, utilizatorul putându-și compara regimul cu luna precedentă.
+                    </p>
+                </section>
+                <section>
+                    <h4>2.2.5. Extra:</h4>
+                    <p>Din pagina principală utilizatorul va mai putea accesa 3 pagini: citate motivaționale, 
+                        săli recomandate și calculatorul IMC extern.
+                    </p>
+                    <ul>
+                        <li>În pagina de citate, tot ce trebuie utilizatorul să facă este să apese butonul 
+                            care generează mai multe citate. Poate face acest lucru de 3 ori, apoi butonul 
+                            va dispărea.
+                        </li>
+                        <li>
+                            În pagina de săli recomandate, utilizatorul poate introduce în bara de căutare 
+                            diferite caractere și aflând toate sălile disponibile ale căror nume încep cu 
+                            aceste caractere.
+                        </li>
+                        <li>
+                            La urmarea link-ului spre calculatorul IMC extern, utilizatorul își va primi indicele 
+                            prin introducerea înălțimii și greutății curente.
+                        </li>
+                    </ul>
                 </section>
             </section>
         </section>
         <section role="doc-conclusion">
             <h2>3. Concluzie:</h2>
-            <p>În concluzie, acesta este ghidul de utilizare al aplicației, care va îndruma un utilizator oarecare 
+            <p>În concluzie, acesta este ghidul de utilizare al aplicației, care va îndruma un utilizator oarecare
                 spre utilizarea sa.</p>
         </section>
     </article>

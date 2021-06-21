@@ -52,18 +52,14 @@
                 <h3>2.1. Front-end:</h3>
                 <p>Proiectul are la bază o pagină de autentificare, una de
                     înregistrare, una de verificare, o pagină principală, una cu generatorul, una cu antrenamentele
-                    generate, una cu rezultatul antrenamentului curent și
-                    una cu un clasament al celor mai active persoane. Fiecare pagină conține un
-                    header cu link-uri spre pagina principală și clasament.</p>
+                    generate, una cu rezultatul antrenamentului curent, una cu un clasament al celor mai active
+                    persoane,
+                    două cu statistici globale și personale, o pagină de citate motivaționale, una
+                    cu săli recomandate și un link spre un calculator IMC extern. Majoritatea paginilor conțin un
+                    header cu link-uri spre pagina de autentificare și clasament.</p>
                 <section>
                     <h4>2.1.1. Pagina de autentificare:</h4>
-                    <p>Pagina principală este prima pagină a aplicației, care are rolul
-                        de a întâmpina fiecare utilizator, a prezenta pe larg aspectele
-                        aplicației și a face legătura cu paginile de login și clasamentul.</p>
-                </section>
-                <section>
-                    <h4>2.1.2. Pagina de login:</h4>
-                    <p>Pagina de login este prima pagină a aplicației pentru un utilizator neautentificat și
+                    <p>Pagina de autentificare este prima pagină a aplicației pentru un utilizator neautentificat și
                         are rolul de a autentifica utilizatorii pentru ca aceștia să aibă acces la generator,
                         să își poată reține datele și să poată apărea în clasament. Pentru a se autentifica,
                         utilizatorii
@@ -71,7 +67,7 @@
                         nu are cont, își poate crea unul prin intermediul paginii de înregistrare.</p>
                 </section>
                 <section>
-                    <h4>2.1.3. Pagina de înregistrare:</h4>
+                    <h4>2.1.2. Pagina de înregistrare:</h4>
                     <p>Pagina de înregistrare are rolul de a permite utilizatorilor să
                         își creeze cont dacă nu au. Acest cont va putea fi folosit pentru
                         a primi acces deplin la aplicație. Utilizatorii vor trebui să își introducă
@@ -79,10 +75,17 @@
                         putea verifica contul prin intermediul unui link trimis pe email.</p>
                 </section>
                 <section>
-                    <h4>2.1.4. Pagina de verificare:</h4>
+                    <h4>2.1.3. Pagina de verificare:</h4>
                     <p>După urmarea link-ului trimis pe email, utilizatorii vor ajunge la pagina de verificare, care
-                        le va valida
+                        le va valida contul, permițându-le accesul la restul aplicației.
                     </p>
+                </section>
+                <section>
+                    <h4>2.1.4. Pagina principală:</h4>
+                    <p>Pagina principală este prima pagină a aplicației, care are rolul
+                        de a întâmpina fiecare utilizator, a prezenta pe larg aspectele
+                        aplicației și a face legătura cu paginile de login, clasamentul, cele de statistici,
+                        citate, săli și calculatorul IMC extern.</p>
                 </section>
                 <section>
                     <h4>2.1.4. Generatorul de antrenamente:</h4>
@@ -95,20 +98,41 @@
                         conține o imagine demonstrativă, numărul de ordine, numele exercițiului, durata,
                         instrucțiunile de executare, arderile estimate și un buton pentru a declara
                         încheierea sa. În orice moment, antrenamentul poate fi încheiat, utilizatorul fiind
-                        trimis la pagina cu rezultatul, unde va vedea numărul total de kcal arse estimate
-                        și va putea accesa pagina cu statistici sau clasamentul.</p>
+                        trimis la pagina cu rezultatul, unde va putea accesa pagina cu statistici personale
+                        sau clasamentul.</p>
                 </section>
                 <section>
-                    <h4>2.1.5. Pagina de statistici:</h4>
-                    <p>Pagina de statistici este pagina personală a fiecărui utilizator, unde vor fi afișate:
-                        numele, vârsta, înălțimea, greutatea, genul și exercițiile preferate, în ordinea
-                        numărului de execuții.</p>
+                    <h4>2.1.5. Paginile de statistici:</h4>
+                    <p>Aplicația conține două pagini de statistici: una de statistici globale și una de
+                        statistici personale.</p>
+                    <ul>
+                        <li>Pagina de statistici globale conține, pentru fiecare utilizator, username-ul,
+                            adresa de email, caloriile arse și antrenamentul preferat. Această pagină este
+                            disponibilă și drept flux de date RSS.
+                        </li>
+                        <li>Pagina de statistici personale este pagina personală a fiecărui utilizator,
+                            unde vor fi afișate: numărul de antrenamente, caloriile arse și antrenamentul
+                            preferat, atât în total, cât și în cadrul lunii curente, și în comparație cu luna
+                            precedentă.</li>
+                    </ul>
                 </section>
                 <section>
                     <h4>2.1.6. Clasamentul:</h4>
                     <p>Această pagină, accesibilă de oricine, indiferent dacă are cont sau nu, afișează cele
                         mai active persoane, în ordinea numărului de kcal arse. Informațiile disponibile sunt:
                         numele, vârsta, înălțimea, greutatea, numărul de kcal arse și exercițiul preferat.</p>
+                </section>
+                <section>
+                    <h4>2.1.7. Pagina de citate motivaționale:</h4>
+                    <p>Această pagină conține un buton care generează câteva citate printr-un apel AJAX. După trei
+                        utilizări, butonul dispare. De asemenea, pagina conține un link spre pagina principală.
+                    </p>
+                </section>
+                <section>
+                    <h4>2.1.8. Pagina de săli recomandate:</h4>
+                    <p>Această pagină conține o bară de căutare care, la introducerea de caractere, prezintă toate
+                        sălile disponibile ale căror nume încep cu caracterele introduse.
+                    </p>
                 </section>
             </section>
             <section>
@@ -118,14 +142,12 @@
                     menținute într-o bază de date externă, iar antrenamentele sunt stocate în fișiere JSON.</p>
                 <section>
                     <h4>2.2.1. Baza de date:</h4>
-                    <p>Baza de date la care se conectează aplicația conține 3 tabele: users, info si clasament,
-                        fiecare cu propriile roluri:</p>
+                    <p>Baza de date la care se conectează aplicația conține 6 tabele: users, info, clasament,
+                        statistici, sali_sport și curent, fiecare cu propriile roluri:</p>
                     <ul>
                         <li>users: responsabil de administrarea fiecărui cont, câmpurile din acest tabel sunt:</li>
                         <ul>
-                            <li>user_id: stochează id-ul fiecărui utilizator printr-un număr întreg, auto-incrementat
-                                de către baza de date.
-                            </li>
+                            <li>user_id: stochează id-ul fiecărui utilizator printr-un număr întreg.</li>
                             <li>user_name: stochează username-ul fiecărui utilizator.</li>
                             <li>password: stochează parola fiecărui utilizator.</li>
                             <li>email: stochează adresa de email a fiecărui utilizator, servind drept cheie primară.
@@ -144,9 +166,13 @@
                             <li>email: stochează email-ul utilizatorului care a realizat acest antrenament.</li>
                             <li>inaltime: stochează înălțimea aleasă pentru antrenament.</li>
                             <li>greutate: stochează greutatea aleasă pentru antrenament.</li>
-                            <li>grupa_muschi: stochează grupa musculară aleasă pentru antrenament.</li>
+                            <li>grupa_muschi_1: stochează prima grupă musculară aleasă pentru antrenament.</li>
+                            <li>grupa_muschi_2: stochează a doua grupă musculară aleasă pentru antrenament,
+                                în cazul în care a fost ales un regim compus.</li>
                             <li>locatie: stochează locația aleasă pentru antrenament.</li>
                             <li>dificultate: stochează dificultatea aleasă pentru antrenament.</li>
+                            <li>data: stochează data la care a fost generat antrenamentul</li>
+                            <li>calorii: stochează valoarea calorică a antrenamentului generat.</li>
                         </ul>
                         <li>clasament: responsabil de administrarea clasamentului, câmpurile din acest tabel sunt:</li>
                         <ul>
@@ -155,8 +181,34 @@
                             <li>email: stochează email-ul fiecărui utilizator care apare în clasament.</li>
                             <li>nr_antrenamente: stochează numărul de antrenamente realizate de fiecare utilizator
                                 care apare în clasament.</li>
-                            <li>antrenament_pref: stochează antrenamentul preferat al fiecărui utilizator.
-                                (neimplementat)</li>
+                            <li>antrenament_pref: stochează antrenamentul preferat al fiecărui utilizator.</li>
+                            <li>calorii: stochează caloriile arse de fiecare utilizator până în prezent.</li>
+                        </ul>
+                        <li>statistici: responsabil de administrarea statisticilor, câmpurile din acest tabel sunt:</li>
+                        <ul>
+
+                            <li>id: stochează id-ul fiecărei intrări din paginile de statistici.</li>
+                            <li>email: stochează email-ul fiecărui utilizator care apare în paginile de statistici.</li>
+                            <li>antrenament_pref: stochează antrenamentul preferat al fiecărui utilizator.</li>
+                            <li>nr_crt: stochează id-ul fiecărei intrări din paginile de statistici.</li>
+                            <li>calorii: stochează caloriile arse de fiecare utilizator până în prezent.</li>
+                        </ul>
+                        <li>curent: responsabil de administrarea statisticilor utilizatorului conectat,
+                            câmpurile din acest tabel sunt:</li>
+                        <ul>
+                            <li>id: stochează id-ul utilizatorului curent.</li>
+                            <li>nume: stochează username-ul utilizatorului curent.</li>
+                            <li>email: stochează email-ul utilizatorului curent.</li>
+                            <li>nr_antrenamente: stochează numărul de antrenamente realizate de utilizatorul curent.
+                            </li>
+                            <li>antrenament_pref: stochează antrenamentul preferat al utilizatorului curent.</li>
+                            <li>calorii: stochează caloriile arse de utilizatorului curent.</li>
+                        </ul>
+                        <li>sali_sport: responsabil de administrarea sălilor de sport disponibile, câmpurile din
+                            acest tabel sunt:</li>
+                        <ul>
+                            <li>id: stochează id-ul fiecărei săli de sport din baza de date.</li>
+                            <li>nume: stochează numele fiecărei săli de sport din baza de date.</li>
                         </ul>
                     </ul>
                 </section>
@@ -236,6 +288,89 @@ while ($i < $arrayLength) {
                             </pre>
                     </figure>
                 </section>
+                <section>
+                    <h4>2.2.6. Apelurile AJAX:</h4>
+                    <p>Această aplicație conține două apeluri AJAX, fiecare cu propriul rol:</p>
+                    <ul>
+                        <li>Primul apel AJAX este responsabil de preluarea datelor din clasament, pentru a putea
+                            fi afișate în cadrul tabelului, astfel:</li>
+                        <figure typeof="schema:SoftwareSourceCode">
+                            <figcaption>Cod AJAX pentru preluarea datelor din clasament:</figcaption>
+                            <pre>
+    var ajax = new XMLHttpRequest();
+    var method = "GET";
+    var url = "functii_php/data.php";
+    var asynchronous = true;
+    
+    ajax.open(method, url, asynchronous);
+    ajax.send();
+    
+    ajax.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        var data = JSON.parse(this.responseText);
+        console.log(data); //for debugging
+    
+        var html = "";
+        for (var a = 0; a < data.length; a++) {
+            var email = data[a].email;
+            var user_name = data[a].user_name;
+            var nr_antrenamente = data[a].nr_antrenamente;
+            var calorii = data[a].calorii;
+            var antrenament_pref = data[a].antrenament_pref;
+    
+            //appending  at html
+            html += "&lt;tr&gt;";
+            html += "&lt;td&gt;" + user_name + "&lt;/td&gt;";
+            html += "&lt;td&gt;" + email + "&lt;/td&gt;";
+            html += "&lt;td&gt;" + nr_antrenamente + "&lt;/td&gt;";
+            html += "&lt;td&gt;" + calorii + "&lt;/td&gt;";
+            html += "&lt;td&gt;" + antrenament_pref + "&lt;/td&gt;";
+            html += "&lt;/tr&gt;";
+        }
+    
+        document.getElementById("data").innerHTML = html;
+        }
+    }
+                            </pre>
+                        </figure>
+                        <li>Al doilea apel AJAX este responsabil de generarea citatelor motivaționale astfel:</li>
+                        <figure typeof="schema:SoftwareSourceCode">
+                            <figcaption>Cod AJAX pentru generarea citatelor motivaționale:</figcaption>
+                            <pre>
+var nr = 1;
+var userContainer = document.getElementById("user-info");
+var btn = document.getElementById("btn");
+btn.addEventListener("click", function () {
+    var ourRequest = new XMLHttpRequest();
+    ourRequest.open('GET', 'http://localhost/rezerva/mot-' + nr + '.json');
+    ourRequest.onload = function () {
+        var ourData = JSON.parse(ourRequest.responseText);
+        renderHTML(ourData);
+    };
+    ourRequest.send();
+    nr++;
+    if (nr &gt; 3) {
+        btn.classList.add("hide-me");
+    }
+});
+
+function renderHTML(data) {
+    var htmlString = "";
+    for (i = 0; i &lt; data.length; i++) {
+        //        htmlString += "&lt;p&gt;&lt;center&gt;" + data[i].name + " a trimis mesajul:" + data[i].mesaj + ".&lt;/center&gt;&lt;/p&gt;";
+        htmlString += "&lt;p&gt;&lt;center&gt;" + data[i].name + " said: " + "&lt;/center&gt;&lt;/p&gt;";
+        htmlString += "&lt;p&gt;&lt;center&gt;" + data[i].mesaj + ".&lt;/center&gt;&lt;/p&gt;";
+    }
+    userContainer.insertAdjacentHTML('beforeend', htmlString);
+}
+                            </pre>
+                        </figure>
+                    </ul>
+                </section>
+                <section>
+                    <h4>2.2.7. Fluxul RSS:</h4>
+                    <p>Fluxul de date RSS este fișierul srss.xml, disponibil pe pagina statistici.php.</p>
+                </section>
             </section>
         </section>
         <section>
@@ -254,7 +389,9 @@ while ($i < $arrayLength) {
         </section>
         <section role="doc-conclusion">
             <h2>4. Concluzie:</h2>
-            <p>În concluzie, această aplicație realizează doar o parte din sarcinile necesare.</p>
+            <p>În concluzie, această aplicație are rolul de a genera antrenamente pentru utilizatori, a le 
+                permite să își măsoare progresul și a îi motiva să continue să se antreneze prin competiție sau 
+                citate motivaționale.</p>
         </section>
     </article>
 </body>
