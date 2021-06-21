@@ -27,7 +27,7 @@
             <h1>Înregistrare</h1>
             <div class="txtb">
                 <label>Username:</label>
-                <input class="training__input" type="text" name="u" value="" placeholder="Introduceți username-ul">
+                <input class="training__input" type="text" name="u" value="" minlength="5" placeholder="Introduceți username-ul">
             </div>
 
             <div class="txtb">
@@ -54,18 +54,17 @@
                 <input class="training__input" type="text" name="v" value="" placeholder="Introduceți vârsta">
             </div>
 
+            <?php
+                require_once "functii_php/registration_function.php";
+                echo $error;
+            ?>
+            
             <a class="btn">
                 <input class="training__btn" id="button" type="submit" value="Înregistrare" name="submit" required />
             </a>
-            <?php
-                require_once "functii_php/registration_function.php";
-            ?>
             <a class="training__btn" href="login.php">Autentificare</a>
         </form>
     </div>
-    <?php
-    echo $error;
-    ?>
 </body>
 
 </html>
