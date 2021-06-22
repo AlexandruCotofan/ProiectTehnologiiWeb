@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
             //send email
             $to = $e;
             $subject = "Email Verification";
-            $message = "<a href='http://localhost/verify.php?vkey=$vkey'>Register Account</a>";
+            $message = "<a href='http://localhost/rezerva/verify.php?vkey=$vkey'>Register Account</a>";
             $headers = "From: popescusebi1234@yahoo.com  \r\n";
             $headers .= "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
